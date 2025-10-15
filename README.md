@@ -1,3 +1,6 @@
+
+14-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/3aU2zMpk
+
 python -m venv venv
 venv\Scripts\activate
 pip install Django
