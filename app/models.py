@@ -38,7 +38,7 @@ class Produtos(models.Model):
     unidade = models.ForeignKey(Unidade, on_delete=models.PROTECT, related_name='chave_unidade')
     grupo = models.ForeignKey(Grupo, on_delete=models.PROTECT, related_name='chave_grupo')
     fabricante = models.ForeignKey(Fabricante, on_delete=models.PROTECT, related_name='chave_fabricante') 
-       
+    imagem1 = models.ImageField(upload_to='medeia/', blank=True, null=True)
 
     def __str__(self):
         return self.codigo

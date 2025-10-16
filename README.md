@@ -1,5 +1,5 @@
 
-15-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/vTBKWeuL
+15-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/MmvO4GBp
 
 python -m venv venv
 venv\Scripts\activate

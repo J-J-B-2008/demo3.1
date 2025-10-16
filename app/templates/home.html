@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    manausautopecas.com.br HR-HX - BD PSQL
+    <div class="car-grid">
+    {% if produto %}
+      {% for prods in produto %}
+        <div class="car-card">
+          {% if prods.imagem1 %}  
+            <img src="{{ prods.imagem1.url }}" alt="{{ 'prods.codigo' }} ">
+          {% else %}
+            <img src="#">  
+          {% endif %}
+          <h5>{{ prods.descricao }} {{ prods.aplicacao }}</h5>
+          <p>{{ prods.codigo }} -  {{ prods.fabricante }}</p>
+        </div>
+      {% endfor %}
+      {% else %}
+      <p class="no-results">Pesquisa sem resultado.</p>
+    {% endif %}
+  </div>    
+    <h5> media he-hx </h5>
 {% endblock  %}
