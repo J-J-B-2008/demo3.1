@@ -1,5 +1,7 @@
 
-15-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/MmvO4GBp
+19-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/btXlUBEb
+
+https://realpython.com/django-redirects/#:~:text=Passando%20Par%C3%A2metros%20com%20Redirecionamentos,-%C3%80s%20vezes%2C%20voc%C3%AA&text=Primeiro%2C%20voc%C3%AA%20usa%20django.,o%20%C3%BAltimo%20geraria%20uma%20exce%C3%A7%C3%A3o.
 
 python -m venv venv
 venv\Scripts\activate
@@ -27,14 +29,20 @@ na home.html
     ->sudo apt install python3-venv -y
     ->sudo apt install python3-pip
 
+      COMANDOS GIT
+      https://www.hostinger.com/br/tutoriais/comandos-git?utm_campaign=Generic-Tutorials-DSA|NT:Se|LO:BR-t3&utm_medium=ppc&gad_source=1&gad_campaignid=19588998604&gbraid=0AAAAADMy-haTdczLLwLupRsYSMWAKSYyJ&gclid=CjwKCAjwr8LHBhBKEiwAy47uUvUUwjeuw9Vfr5BfitORL93c_0M5mUxuNpu8K6skijTgs6z7EFRtphoCC3EQAvD_BwE#Comandos_de_branch_e_merge_do_Git
+
       atualizar GIT da LOCALHOST
     ->git add .   
     ->git commit -am "mensagem"
     ->git push origin main
 
-       tratar erros na vps
-    ->git config pull.rebase true   
+       TRATAR CONFLITOS NA VPS
+    ->git config pull.rebase true 
 
+    ->git stash (1)
+    ->git rebase --continue (2)
+    
       GIT na VPS
     ->git pull
 

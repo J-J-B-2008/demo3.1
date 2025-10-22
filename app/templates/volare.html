@@ -138,7 +138,7 @@
   </head>
   <body>
   <header>
-    <nav>
+    <nav>      
       <ul>
         <li><a href="{% url 'home' %}">HOME</a></li>
       </ul>
@@ -149,12 +149,34 @@
     </nav>
   </header>
 
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+{% block content %}
+    
 
-  <footer>
+    <form method="GET" action="{% url 'volare' %}">
+        <input type="text" name="search" placeholder="BUSCAR APLICAÇÃO">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="car-grid">
+    {% if volareproduto %}
+      {% for prods in volareproduto %}
+        <div class="car-card">
+          {% if prods.imagem1 %}  
+            <img src="{{ prods.imagem1.url }}" alt="{{ 'prods.codigo' }} ">
+          {% else %}
+            <img src="#">  
+          {% endif %}
+          <h5>{{ prods.descricao }} {{ prods.aplicacao }}</h5>
+          <p>{{ prods.codigo }} -  {{ prods.fabricante }}</p>
+        </div>
+      {% endfor %}
+      {% else %}
+      <p class="no-results">Pesquisa sem resultado.</p>
+    {% endif %}
+  </div> 
+{% endblock  %}    
+
+<footer>
     <p>&copy; 2025 By JJB  </p>
   </footer>
 </body>

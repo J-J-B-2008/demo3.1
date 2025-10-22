@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <style>
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>  
+
+ 
     <div class="car-grid">
     {% if produto %}
       {% for prods in produto %}
@@ -17,6 +29,7 @@
       {% else %}
       <p class="no-results">Pesquisa sem resultado.</p>
     {% endif %}
-  </div>    
-    <h5> media he-hx </h5>
+  </div>   
+   
+    
 {% endblock  %}

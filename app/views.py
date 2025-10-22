@@ -9,5 +9,18 @@ def home(request):
 
     return render(request, "home.html", { 'produto': produto })
 
-#def home(request):
-#    return render(request, 'home.html')
+def volare(request):   
+       
+    volareproduto = Produtos.objects.filter(montadora__nome__icontains='volare').order_by('descricao')
+    search =  request.GET.get('search')
+    if search:
+        volareproduto = Produtos.objects.filter(aplicacao__icontains=search).order_by('descricao')
+
+    context = {
+        'volareproduto' : volareproduto,
+        'search' : search
+
+    }
+    return render(request, 'volare.html', context)
+
+    
