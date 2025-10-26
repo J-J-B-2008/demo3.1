@@ -1,4 +1,5 @@
 from django.db import models
+from grupo.models import Group
 
 
 class Montadora(models.Model):
@@ -36,7 +37,7 @@ class Produtos(models.Model):
     aplicacao = models.CharField(max_length=255)
     montadora = models.ForeignKey(Montadora, on_delete=models.PROTECT, related_name='chave_montadora')
     unidade = models.ForeignKey(Unidade, on_delete=models.PROTECT, related_name='chave_unidade')
-    grupo = models.ForeignKey(Grupo, on_delete=models.PROTECT, related_name='chave_grupo')
+    grupo = models.ForeignKey(Group, blank=True, null=True, on_delete=models.PROTECT, related_name='chave_grupo')
     fabricante = models.ForeignKey(Fabricante, on_delete=models.PROTECT, related_name='chave_fabricante') 
     imagem1 = models.ImageField(upload_to='medeia/', blank=True, null=True)
 

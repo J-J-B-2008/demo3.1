@@ -1,6 +1,10 @@
 
-19-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/btXlUBEb
-
+19-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/AE9ATEyF ->filter
+23-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/btXlUBEb ->based-views
+24-10-> https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/ARiJPEYi ->app grupo 
+25-10-> aqui https://app.hub.la/m/uQuqcbKjxy8zfgDq2W90/p/98jFSnRZ
+25-10-> 2 filtros LISTVIEW 'ia passar 2 paramentros filtrados ListView para outra pagina em django'
+ 
 https://realpython.com/django-redirects/#:~:text=Passando%20Par%C3%A2metros%20com%20Redirecionamentos,-%C3%80s%20vezes%2C%20voc%C3%AA&text=Primeiro%2C%20voc%C3%AA%20usa%20django.,o%20%C3%BAltimo%20geraria%20uma%20exce%C3%A7%C3%A3o.
 
 python -m venv venv
