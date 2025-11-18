@@ -1,5 +1,6 @@
 from django.db import models
 from grupo.models import Group
+from volare.models import GrupoVolare
 
 
 class Montadora(models.Model):
@@ -40,6 +41,7 @@ class Produtos(models.Model):
     grupo = models.ForeignKey(Group, blank=True, null=True, on_delete=models.PROTECT, related_name='chave_grupo')
     fabricante = models.ForeignKey(Fabricante, on_delete=models.PROTECT, related_name='chave_fabricante') 
     imagem1 = models.ImageField(upload_to='medeia/', blank=True, null=True)
+    grupovolare = models.ManyToManyField(to=GrupoVolare, related_name='grupovolare', null=True, blank=True)
 
     def __str__(self):
         return self.codigo

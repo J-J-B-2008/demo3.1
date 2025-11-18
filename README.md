@@ -62,3 +62,39 @@ na home.html
 comandos POSTIGRES 
 ->sudo -u postgres psql
 ->\l
+
+
+04-11-25 
+pip install crispy-bootstrap5
+pip install django-crispy-forms
+pip install django-filter
+pip install crispy-bootstrap4
+
+
+class VolareListView(ListView):
+    model = models.Produtos
+    template_name = "volare.html"
+    context_object_name = "volareproduto"
+    ordering = "descricao"
+    
+
+    def get_queryset(self):
+        volareproduto = super().get_queryset()              
+        search = self.request.GET.get('search')
+        grupo = self.request.GET.get('grupo')
+        volareproduto = Produtos.objects.filter(montadora__nome__icontains='volare').order_by('descricao')
+         
+        if search:
+            volareproduto = Produtos.objects.filter(aplicacao__icontains=search)  
+
+        if grupo:
+            volareproduto = Produtos.objects.filter(grupo__id=grupo)
+
+        return volareproduto 
+        
+    def get_context_data(self, **kwargs):
+        context =  super().get_context_data(**kwargs)
+        context['grupos'] = Group.objects.filter(nome__icontains='VLR').order_by('nome')
+          
+
+        return context  

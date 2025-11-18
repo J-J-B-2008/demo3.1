@@ -40,7 +40,16 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app",
     "grupo",
+     "django_filters",
+    "crispy_forms",
+    "crispy_bootstrap4",
+    "crispy_bootstrap5",
+    "volare",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

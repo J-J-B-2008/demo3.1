@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -152,39 +154,26 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
-  
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+    <!-- Or for RTL support -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.rtl.min.css" />
+
+
   </header>
 
-{% block content %}
-
-
-<div class="container text-center">    
-  <div class="row md-3"> 
-
-    <div class="col-md-4">
-      <form method="GET" action="{% url 'volare' %}">
-        <div class="input-group">  
-          <input type="text" class="form-control" name="search" placeholder="BUSCAR APLICAÇÃO" value= "{{ request.GET.aplicacao }}">
-          <button type="submit" class="btn btn-primary">FILTRAR</button>
-          
-        </div>
-      </form>
-    </div>
-    
-    <div class="col-md-4">
-      <form method="GET" action="{% url 'volare' %}">
-        <div class="input-group">
-        <select class="form-select" name="grupo">
-          <option value="" {% if not request.GET.grupo %} selected {% endif %}> FILTRAR GRUPO </option> 
-          {% for grupo in grupos %}
-            <option value="{{ grupo.id }}" {% if request.GET.grupo == grupo.id %} selected {% endif %}> {{ grupo.nome }} </option>
-          {% endfor %}
-        </select>
-        <button type="submit" class="btn btn-primary">FILTRAR</button>
-      </div>
-      </form>  
-    </div>
-
+  <div class="container text-center">    
+  <div class="row md-3">
+    <div class="col-md-12">
+    <form method="GET"> 
+      {{ filter.form|crispy }}
+      <button type="submit" class= "btn btn-primary mt-3 ms-1 me-1"> FILTRAR </button>
+      <a  class= "btn btn-secondary mt-3 " href="{% url 'volare' %}"> LIMPAR </a>
+    </form> 
+  </div>
   </div>
 </div> 
 
@@ -207,7 +196,24 @@
   {% endif %}
 </div>
 
-{% endblock  %}    
+   
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.select').select2();
+    $('.selectmultiple').select2({
+      multiple: true
+      
+    });
+  });
+</script>
 
 <footer>
     <p>&copy; 2025 By JJB  </p>
