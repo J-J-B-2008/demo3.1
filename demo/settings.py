@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     "grupo",
     "django_filters",
     "crispy_forms",
-    "crispy_bootstrap4",
-    "crispy_bootstrap5",
+    "crispy_bootstrap4",    
     "volare",
 ]
 

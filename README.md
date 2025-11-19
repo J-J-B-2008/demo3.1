@@ -36,7 +36,7 @@ na home.html
       COMANDOS GIT
       https://www.hostinger.com/br/tutoriais/comandos-git?utm_campaign=Generic-Tutorials-DSA|NT:Se|LO:BR-t3&utm_medium=ppc&gad_source=1&gad_campaignid=19588998604&gbraid=0AAAAADMy-haTdczLLwLupRsYSMWAKSYyJ&gclid=CjwKCAjwr8LHBhBKEiwAy47uUvUUwjeuw9Vfr5BfitORL93c_0M5mUxuNpu8K6skijTgs6z7EFRtphoCC3EQAvD_BwE#Comandos_de_branch_e_merge_do_Git
 
-      atualizar GIT da LOCALHOST
+      ATUALIZAR GIT da LOCALHOST
     ->git add .   
     ->git commit -am "mensagem"
     ->git push origin main
