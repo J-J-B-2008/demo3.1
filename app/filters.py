@@ -16,7 +16,6 @@ class VolareFilter(django_filters.FilterSet):
     class Meta:
         model = Produtos
         fields = {
-            "grupovolare": ["exact"],
             "descricao": ["icontains"],
             "aplicacao": ["icontains"],            
         }
