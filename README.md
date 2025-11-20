@@ -52,6 +52,9 @@ na home.html
 
     pip install -r requirements.txt
 
+   reiniciar LiteSpeed--> /usr/local/lsws/bin/lswsctrl restart
+   limpar cache--> pip cache purge
+
     08-10 ki--->https://dashboard.kiwify.com/course/premium/d55ab802-47f7-40f2-a6b6-19b68ffb8e32?mod=23a557c4-1ce2-4171-b197-0357b9319b70&lesson=c1608ffd-fd2d-4001-9a52-9d55f5d671f8
 
     DATABASES = {
@@ -67,7 +70,7 @@ comandos POSTIGRES
 
 
 04-11-25 
-pip install crispy-bootstrap5
+
 pip install django-crispy-forms
 pip install django-filter
 pip install crispy-bootstrap4
